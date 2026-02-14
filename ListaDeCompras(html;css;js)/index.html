@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Compras</title>
+  <!-- Convocando o CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    
+    <!-- Lateral esquerda: exibição da lista -->
+    <div class="list-box">
+      <h1>Lista de Compras</h1>
+      <div id="listas">
+        <h2>Limpeza</h2><ul id="Limpeza"></ul>
+        <h2>Grãos</h2><ul id="Grãos"></ul>
+        <h2>Proteínas</h2><ul id="Proteínas"></ul>
+        <h2>Temperos Secos</h2><ul id="Temperos Secos"></ul>
+        <h2>Temperos Verdes</h2><ul id="Temperos Verdes"></ul>
+        <h2>Legumes</h2><ul id="Legumes"></ul>
+        <h2>Laticínios</h2><ul id="Laticínios"></ul>
+        <h2>Complementos de Cozimento</h2><ul id="Complementos de Cozimento"></ul>
+        <h2>Outros</h2><ul id="Outros"></ul>
+      </div>
+    </div>
+
+    <!-- Caixa central: gerenciamento -->
+    <div class="form-box">
+      <h1>Gerenciar Lista 🛒</h1>
+
+      <form id="formAdicionar">
+        <input type="text" id="novoItem" placeholder="Nome do item..." required>
+        <input type="number" id="quantidade" placeholder="Quantidade" min="1" value="1" required>
+        <select id="categoria" required>
+          <option value="" disabled selected>Escolha a categoria</option>
+          <option value="Limpeza">Limpeza</option>
+          <option value="Grãos">Grãos</option>
+          <option value="Proteínas">Proteínas</option>
+          <option value="Temperos Secos">Temperos Secos</option>
+          <option value="Temperos Verdes">Temperos Verdes</option>
+          <option value="Legumes">Legumes</option>
+          <option value="Laticínios">Laticínios</option>
+          <option value="Complementos de Cozimento">Complementos de Cozimento</option>
+          <option value="Outros">Outros</option>
+        </select>
+        <button type="submit">Adicionar Item</button>
+      </form>
+
+      <button id="baixar">Baixar Lista</button>
+    </div>
+  </div>
+
+  <!-- Convocando o JS -->
+  <script src="script.js"></script>
+</body>
+</html>
