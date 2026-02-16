@@ -28,6 +28,7 @@ body {
   text-align: center;
   color: #004d40;
   margin-bottom: 20px;
+  font-size: 26px;
 }
 
 h2 {
@@ -35,6 +36,7 @@ h2 {
   color: #004d40;
   border-bottom: 2px solid #00796b;
   padding-bottom: 5px;
+  font-size: 20px;
 }
 
 ul {
@@ -45,11 +47,12 @@ ul {
 ul li {
   background: #f9f9f9;
   margin: 6px 0;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   font-weight: 500;
   color: #333;
   border: 1px solid #ddd;
+  font-size: 16px;
 }
 
 .form-box {
@@ -65,7 +68,7 @@ ul li {
   text-align: center;
   color: #00796b;
   margin-bottom: 25px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
 }
 
@@ -78,22 +81,23 @@ form {
 
 form input, form select {
   flex: 1 1 45%;
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 16px;
   background-color: #f9f9f9;
 }
 
 form button {
   flex: 1 1 100%;
-  padding: 12px;
+  padding: 14px;
   border: none;
   background: #00796b;
   color: white;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 form button:hover {
@@ -102,15 +106,54 @@ form button:hover {
 
 #baixar {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   border: none;
   background: #0288d1;
   color: white;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 #baixar:hover {
   background: #01579b;
 }
+
+/* 🔹 Responsividade para celular */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* empilha os blocos */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .list-box, .form-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .list-box {
+    max-height: none; /* remove limite de altura */
+  }
+
+  /* Ajustes de fonte e botões para celular */
+  .list-box h1, .form-box h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  ul li {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  form input, form select, form button, #baixar {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
