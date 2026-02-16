@@ -17,8 +17,8 @@ body {
 
 /* Caixa da lista lateral */
 .list-box {
-  flex: 1 1 40%;         /* ocupa 40% do espaço, mas pode crescer/diminuir */
-  min-width: 300px;      /* nunca fica menor que 300px */
+  flex: 1 1 40%;         /* ocupa ~40% do espaço, mas ajusta */
+  min-width: 280px;      /* nunca fica menor que 280px */
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -29,7 +29,7 @@ body {
   text-align: center;
   color: #004d40;
   margin-bottom: 20px;
-  font-size: clamp(20px, 2.5vw, 26px); /* fonte responsiva */
+  font-size: clamp(20px, 2.5vw, 26px);
 }
 
 h2 {
@@ -58,8 +58,8 @@ ul li {
 
 /* Caixa central */
 .form-box {
-  flex: 1 1 55%;         /* ocupa 55% do espaço, mas ajusta conforme tela */
-  min-width: 300px;
+  flex: 1 1 55%;         /* ocupa ~55% do espaço */
+  min-width: 280px;
   background: #fff;
   padding: 20px;
   border-radius: 14px;
@@ -122,9 +122,14 @@ form button:hover {
   background: #01579b;
 }
 
-/* 🔹 Responsividade extra para telas muito pequenas */
-@media (max-width: 600px) {
+/* 🔹 Responsividade extra para telas pequenas */
+@media (max-width: 768px) {
   .layout {
     flex-direction: column; /* empilha os blocos */
+  }
+
+  .list-box, .form-box {
+    width: 100%; /* ocupa toda a largura */
+    min-width: auto;
   }
 }
